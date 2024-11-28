@@ -79,7 +79,7 @@ def encrypt_file_gcm(input_file, output_file):
     try:
         subprocess.run(
             [
-                "python3", "aes-encrypt.py",
+                "python3", "./malware/aes-encrypt.py",
                 "-key", aes_key_file,
                 "-IV", aes_iv_file,
                 "-mode", "gcm",
@@ -102,7 +102,7 @@ def decrypt_file_gcm(input_file, output_file):
     try:
         subprocess.run(
             [
-                "python3", "aes-decrypt.py",
+                "python3", "./malware/aes-decrypt.py",
                 "-key", aes_key_file,
                 "-IV", aes_iv_file,
                 "-mode", "gcm",
